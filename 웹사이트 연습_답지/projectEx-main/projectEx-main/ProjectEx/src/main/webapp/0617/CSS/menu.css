@@ -1,0 +1,130 @@
+@charset "UTF-8";
+/* menu.css => nav관련 요소 설정 */
+
+/* 모든 ul태그에 적용이 되도록=> 목록기호 삭제, */
+ul {
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/********************top menubox *****************/
+#topMenuBox {
+  float: right; /* 오른쪽정렬 */
+  font-weight: bold;
+  padding-right: 10px;
+}
+
+/*******************main menubox******************/
+#mainMenuBox {
+  width: 1280px; /* 전체 content와 너비를 동일하게 설정. */
+  height: 35px; /* 명시적 높이를 설정 => 스크롤 되어도, 상단에 고정 시키기 위해 최소크기 설정 */
+  line-height: 35px;
+  background: #ffffff;
+  z-index: 10; /* 스크롤시, 고정될 때 맨 위에 나타날 수 있도록, 값을 크게 설정한다. */
+  border-top: solid #ccc 1px;
+  border-bottom: solid #ccc 1px;
+}
+
+#mainMenuBox ul {
+  margin: 0px;
+}
+
+#mainMenuBox li {
+  float: left; /* block 태그를 인라인 태그로 변경. => 왼쪽정렬. */
+  text-align: center;
+  width: 16%; /* 항목 동일한 너비로 */
+  height: 30px;
+  line-height: 30px;
+}
+
+/* 메뉴 요소에 가로 넓이의 합이 100%가 되도록 첫번쨰 메뉴 항목에 %를 19%로 재설정, 
+20%지만, 일단 선택메뉴가 맨 앞 메뉴요소로 출력 할 것이기 때문에 border영역으로 1%남긴다. */
+
+#mainMenuBox li:first-child {
+  /* 첫번째 메뉴항목 */
+  width: 19%;
+  border: solid 3px black; /* 현재 선택(활성화)메뉴 표시 */
+}
+
+#mainMenuBox ul li a {
+  text-decoration: none; /* text의 밑줄삭제 */
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#mainMenuBox ul li a:hover {
+  color: red; /* 글자색 빨강 */
+}
+
+/****************************sub menu**************************/
+#subMenuBox {
+  width: 1280px;
+  height: 160px;
+  background-color: #ffffff;
+  text-align: center;
+  z-index: 10; /* 메인메뉴박스와 겹치지는 않기때문에, 동일 숫자 사용, submenu도 다른 컨텐츠(슬라이드박스) 위로 표현되어야 하기에, z-index를 설정. */
+  padding-bottom: 0;
+  position: absolute;
+  visibility: hidden;
+}
+
+.subMenuItem {
+  width: 15%;
+  background-color: #ffffff;
+  border-left: solid #ccc 1px;
+  border-right: solid #ccc 1px;
+  margin-top: 10px;
+}
+
+#subMenuItem1 {
+  position: absolute; /* 모든 subMenuItem을 일렬로 나열하기 위해서, 기준점에 모으는 작업. */
+  margin-left: 5%; /* 여백 5%부터 시작, subMenuItem width(15%)만큼 오른쪽으로 여백을 늘린다. */
+}
+
+#subMenuItem2 {
+  position: absolute;
+  margin-left: 20%;
+}
+
+#subMenuItem3 {
+  position: absolute;
+  margin-left: 35%;
+}
+
+#subMenuItem4 {
+  position: absolute;
+  margin-left: 50%;
+}
+
+#subMenuItem5 {
+  position: absolute;
+  margin-left: 65%;
+}
+
+#subMenuItem6 {
+  position: absolute;
+  margin-left: 80%;
+}
+
+.subMenuItem ul {
+  background: #ffffff;
+}
+
+.subMenuItem ul li {
+  height: 35px;
+  line-height: 35px;
+}
+
+.subMenuItem ul li a {
+  display: inline-block; /* a태그는 inline태그로 block으로 바꿔 속성값을 바꾸게 해줄수 있다. */
+  color: #333333;
+  text-decoration: none;
+}
+
+.subMenuItem ul li a:hover {
+  background: #ffffff;
+  text-decoration: underline;
+  color: black;
+}

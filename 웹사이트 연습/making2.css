@@ -1,0 +1,107 @@
+/* 1.html전체에 적용값*/
+* {
+  margin: 0 auto;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* 2.(id="wrap"=>코드가 작성된 body의 css공용값  */
+#wrap {
+  /* 브라우저 창에 가장 적합한값 */
+  width: 1210px;
+  /*상대적인 움직임으로 유동적 css 적용가능 */
+  position: relative;
+  text-align: center;
+  background: #eeeeee;
+}
+
+/* 3.image태그에 적용할 레이아웃 */
+img {
+  margin: 0;
+  border: 0;
+}
+
+/* 4.id headerBox 전체 공용 css */
+#headerBox {
+  width: 100%;
+  height: 80px;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 4-1.id = logoBox (메인로고)세부위치조정. */
+#logoBox {
+  margin-left: 5px;
+}
+
+/* 4-2.회원사용 메뉴창 설정 */
+#topMenuBox {
+  margin-right: 10px;
+  font-weight: bold;
+  background: #ffffff;
+}
+/* 4-3. 회원사용 배경화면 & 하위요소 설정 */
+#topMenuItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  font-size: 18px;
+}
+
+#topMenuItem li {
+  margin: 10px;
+}
+
+#topMenuItem a {
+    margin: 10px;
+    color: #000000;
+}
+
+#topMenuItem a:hover{
+    color: red;
+    text-decoration:line;
+}
+
+/* 5.MainMenuBox 전체설정 */
+#mainMenuBox {
+  width: 1210px;
+  height: 35px;
+  background: #ffffff;
+  z-index: 10;
+  border-top: solid #ccc 1px;
+  border-bottom: solid #ccc 1px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 5-1.mainMenuBox의 전체배열, */
+#mainMenuBox ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* 5-2.mainMenuBox 메뉴항목의 균등배열 */
+#mainMenuBox li {
+  flex: 1;
+}
+
+/* 5-3.메뉴항목의 클릭링크 글씨체 적용값 */
+#mainMenuBox a {
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#mainMenuBox a:hover {
+  color: red;
+}
+
+/* 6.subMenuBox 전체레이아웃. */
+#subMenuBox{
+  
+}

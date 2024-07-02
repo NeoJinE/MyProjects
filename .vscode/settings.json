@@ -1,0 +1,21 @@
+{
+  "files.autoSave": "afterDelay",
+  "editor.fontFamily": "Fira Code",
+  "editor.fontSize": 15,
+  "editor.wordWrap": "on",
+  "workbench.colorTheme": "Material Theme Ocean",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "editor.fontLigatures": true,
+  "explorer.confirmDragAndDrop": true,
+  "explorer.confirmDelete": true,
+  "terminal.integrated.enableMultiLinePasteWarning": true,
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.fontFamily": "monospace",
+  "editor.cursorBlinking": "expand",
+  "editor.guides.bracketPairs": true,
+  "editor.renderWhitespace": "trailing",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true
+}

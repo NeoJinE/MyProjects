@@ -1,0 +1,307 @@
+/* 1. 해당 코드 전체에 적용할 css*/
+* {
+  margin: 0 auto;
+}
+
+/* 2.웹페이지 전체에 해당되는 css공용값 */
+#wrap {
+  width: 1280px; /* 브라우저 창에 가장 적합한 width값. 숙지해두면 유용하다. */
+  text-align: center;
+  background: #eeeeee;
+  position: relative; /* wrap의 본래 있는곳에서 상대적으로 움직이게 해줘 유동적으로 css적용가능 */
+}
+
+/* 3.img에 적용할 레이아웃 */
+img {
+  margin: 0;
+  border: 0;
+}
+
+/* 4.#headerBox전체에 공통으로 적용할 css */
+#headerBox {
+  width: 100%;
+  height: 60px;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logoBox {
+  margin-left: 10px;
+}
+
+/* 4-1.스크롤시 메인메뉴바 고정 */
+.mainMenuFixed {
+  position: fixed;
+  top: 0px;
+}
+
+.mainMenuShadow {
+  box-shadow: 0 3px 5px 0px grey;
+}
+
+#topMenuBox {
+  font-weight: bold;
+  padding-right: 10px;
+  margin-right: 10px;
+}
+
+#mainMenuBox {
+  width: 1280px;
+  height: 35px;
+  background: #ffffff;
+  z-index: 10;
+  border-top: solid #ccc 1px;
+  border-bottom: solid #ccc 1px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#mainMenuBox ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+#mainMenuBox li {
+  text-align: center;
+  flex: 1;
+  height: 30px;
+  line-height: 30px;
+}
+
+#mainMenuBox li:first-child {
+  flex: 1;
+  border: solid black 3.2px;
+}
+
+#mainMenuBox a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#mainMenuBox a:hover {
+  color: red;
+}
+
+/* 6.subMenuBox 전체 레이아웃설정. */
+#subMenuBox {
+  width: 1280px;
+  height: 160px;
+  background: #ffffff;
+  text-align: center;
+  z-index: 10;
+  padding-bottom: 0;
+  position: absolute;
+  visibility: hidden;
+  display: flex; /* 부모요소에 flex를 선언 */
+}
+
+.subMenuItem {
+  flex: 1; /* flex:값을 통해서 각 자식요소 일정배치 */
+  background: #ffffff;
+  border-left: solid #ccc 1px;
+  border-right: solid #ccc 1px;
+  margin-top: 10px;
+}
+
+.subMenuItem ul {
+  background-color: #ffffff;
+  list-style: none;
+}
+
+.subMenuItem li {
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  margin-right: 35px;
+}
+
+.subMenuItem a {
+  display: inline-block;
+  color: #333333;
+  text-decoration: none;
+}
+
+.subMenuItem a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+/* 7.슬라이드쇼 레이아웃 설정 */
+#slideShow {
+  position: relative;
+  background: #ffffff;
+  height: 520px;
+  line-height: 520px;
+  border-bottom: solid #ccc 1px;
+}
+
+#slideShowBox {
+  width: 1280px;
+  height: 480px;
+  text-align: center;
+  overflow: hidden;
+}
+
+#slidePanel {
+  /* 5개의 이미지 모두의 영역:1280 * 5 => 6400 width를 가진다. */
+  position: relative;
+  width: 6400px;
+  height: 480px;
+}
+
+.slideImage {
+  float: left;
+  width: 1280px;
+  height: 480px;
+}
+
+#prevNextButtonBox {
+  position: relative;
+  z-index: 10;
+}
+
+#prevButton {
+  position: absolute;
+  top: 201px;
+  left: 4%;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+#nextButton {
+  position: absolute;
+  top: 201px;
+  right: 4%;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+#prevButton:hover {
+  opacity: 1;
+}
+
+#nextButton:hover {
+  opacity: 1;
+}
+
+#controlPanel {
+  margin: 0 auto;
+  width: 160px;
+}
+
+#controlPanel {
+  margin: 0 auto;
+  width: 160px;
+}
+
+#controlPanel img {
+  float: left;
+  margin: 10px;
+}
+
+#tabMenuBox {
+  width: 80%;
+  height: 580px;
+  background: #ffffff;
+  text-align: center;
+  padding: 40px;
+}
+
+#tabMenu ul {
+  height: 30px;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+#tabMenu li {
+  list-style: none;
+  width: 25%;
+  height: 30px;
+  overflow: hidden;
+}
+
+#tabMenu img:hover {
+  cursor: pointer;
+}
+
+.selectedItem img {
+  margin-top: -30px;
+}
+
+#tabContent {
+  width: 100%;
+  height: 550px;
+  margin-top: 20px;
+  border-top: solid #cccccc 1px;
+  border-bottom: solid #cccccc 1px;
+}
+
+#tabContent div {
+  display: none;
+  padding: 0;
+  margin: 20px;
+}
+
+#tabContent div:first-child {
+  display: block;
+}
+
+#tabContent img {
+  width: 90%;
+  border: solid #cccccc 1px;
+}
+
+/* productBox 레이아웃설정. */
+#productBox {
+  width: 80%;
+  height: 700px;
+  background: #ffffff;
+  padding: 40px;
+  margin-top: 20px;
+}
+
+#productBox .product {
+  /* 베스트 상품 목록 행 각각의 레이아웃 */
+  display: inline-block;
+  width: 100%;
+  margin-top: 20px;
+}
+
+#productBox .product div {
+  display: inline-block;
+  width: 303px;
+  height: 303px;
+  border: solid #cccccc 1px;
+  margin: 10px;
+}
+
+#productBox .product div:hover {
+  opacity: 0.7;
+  border: solid red 1px;
+}
+
+#productBox .product div img {
+  width: 100%;
+  height: 100%;
+}
+
+#footerBox {
+  background-color: #777777;
+  border: solid 1px #999999;
+  margin: 0;
+  padding: 20px;
+}
+
+#moveToTop:hover{
+  opacity: 0.8;
+  cursor:pointer;
+}

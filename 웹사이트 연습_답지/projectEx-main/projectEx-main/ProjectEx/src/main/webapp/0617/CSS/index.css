@@ -1,0 +1,18 @@
+@charset "UTF-8";
+/*index.css*/
+
+/*********************header********************/
+
+/* 1.hearder영역안 (logo,topmenu) */
+#headerBox {
+  height: 60px; /* logo.png의 높이가 60px이기에 맞춰준다(자율적으로 설정해도 된다.) */
+  line-height: 60px; /* 줄 간격을 높이와 동일시하게 설정=> 가운데 정렬효과 */
+  padding: 0px;
+}
+
+/* 2.logo img영역태그 */
+#logoBox {
+  float: left;
+  height: 60px;
+  line-height: 60px;
+}
